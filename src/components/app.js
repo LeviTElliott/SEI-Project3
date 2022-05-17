@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { AppContext } from './context-provider'
+import { AppContext } from './context'
 
 import Search from './search'
 import Character from './character'

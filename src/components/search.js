@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react'
-import { AppContext } from './context-provider'
-import styled from 'styled-components'
+import { AppContext } from './context'
 
-import logo from '../assets/edt_logo_white_.png'
+// import logo from '../images/edt_logo_white_.png'
 
 const Search = () => {
   const { setCharData, setError } = useContext(AppContext)
@@ -55,9 +54,9 @@ const Search = () => {
 
   return (
     <SearchStyle>
-      <figure>
+      {/* <figure>
         <img src={logo} alt="Eagle Dream" />
-      </figure>
+      </figure> */}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -82,7 +81,7 @@ const Search = () => {
   )
 }
 
-const SearchStyle = styled.header`
+const SearchStyle =`
   width: 100%;
   display: flex;
   flex-direction: column;

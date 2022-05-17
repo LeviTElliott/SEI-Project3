@@ -1,14 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
-
-import Stats from './stats'
-import Equipment from './equipment'
-
+import Race from './info'
 const Character = ({ char, error }) => {
   return char ? (
     <CharacterStyle>
-      <Stats char={char} />
-      <Equipment char={char} />
+      <Race char={char} />
     </CharacterStyle>
   ) : error ? (
     <CharacterStyle>
@@ -17,7 +12,7 @@ const Character = ({ char, error }) => {
   ) : null
 }
 
-const CharacterStyle = styled.section`
+const CharacterStyle =`
   background-color: rgba(14, 22, 48, 0.65);
   color: #fafafa;
   padding: 5rem;
