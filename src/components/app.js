@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react'
+import { AppContext } from './context-provider'
 
-function App() {
+import Search from './search'
+import Character from './character'
+
+const App = () => {
+  const { charData, error } = useContext(AppContext)
+  console.log(charData)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <Search />
+      <Character char={charData} error={error} />
+    </main>
+  )
 }
 
-export default App;
+export default App
