@@ -1,12 +1,12 @@
 import React from 'react'
-import alliance from '../images/alliance.webp'
-import horde from '../images/horde.jpg'
+import alliance from './images/alliance.webp'
+import horde from './images/horde.jpg'
 
 import {
   raceId,
   classArray,
   factionId
-} from '../constants'
+} from './constants'
 
 const Race = ({ char}) => {
     return (
